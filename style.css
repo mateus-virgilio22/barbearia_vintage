@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #371f00;
+}
+
+/*Cabeçalho*/
+
+.cabecalho {
+    width: 100%;
+    margin-top: 1%;
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    height: 95%;
+    width: 5%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    color: white;
+}
+
+/*Principal da página*/
+
+.container_principal {
+    position: relative; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./imagens/img_prin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container_principal::before,
+.container_principal::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5%; 
+  background: linear-gradient(#371f00, rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, #371f00, rgba(0, 0, 0, 0));
+}
+
+.container_principal::before {
+  top: 0;
+}
+
+.titulo {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 200%;
+}
+
+.nome_empresa {
+    font-family: 'Monoton', cursive;
+    font-size: 7vh;
+    color: antiquewhite;
+}
+
+.nome_empresa_2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1vh;
+    color: antiquewhite;
+}
+
+.apresentacao {
+    width: 100%;
+    height: 600px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apresentacao_content {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.apresentacao_texto {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15%;
+}
+
+.texto_bem-vindo {
+    width: 80%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color: antiquewhite;
+
+}
+
+.bem-vindo {
+    font-weight: bold;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+}
+
+.btn-fixed {
+    position: fixed;
+    bottom: 1%;
+    right: 60%;
+    visibility: hidden;
+}
+
+.btn-fixed.visible {
+    visibility: visible;
+}
+
+.seta {
+    width: 10%;
+    height: 10%;
+    transition: 1s;
+}
+
+.seta:hover {
+    transform: scale(1.1);
+}
+
+/*Serviços*/
+.container_servicos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nossos_servicos {
+    margin-top: 10%;
+    color: antiquewhite;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.servicos {
+    margin-top: 10%;
+    margin-bottom: 100px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 2%;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 8px 8px 5px black;
+    color: black;
+    background-color: antiquewhite;
+    font-size: 15px;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Space Mono', monospace;
+    gap: 10px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 10px 10px black;
+}
+
+
+.cabelo {
+    width: 60%;
+    height: 60%;
+}
+
+.barba {
+    width: 60%;
+    height: 60%;
+}
+
+.cabelo_barba {
+    width: 60%;
+    height: 60%;
+}
+
+.corte {
+    font-size: 1rem;
+}
+
+.corte_cabelo {
+    font-size: 70%;
+    font-weight: bold;
+}
+
+/*Produtos*/
+
+.div_titulo_prod {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_produtos {
+    color: antiquewhite;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.icone_bigode {
+    width: 5%;
+}
+
+.container_produtos {
+    width: 100%;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtos {
+    margin-top: 5%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 30px;
+    column-gap: 15px;
+}
+
+.banner {
+    width: 60%;
+    height: 20rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    box-shadow: 8px 8px 5px black;
+    background-color: antiquewhite;
+    font-size: 1rem;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Space Mono', monospace;
+    gap: 10px;
+}
+
+.banner:hover {
+    transform: scale(1.02);
+    box-shadow: 10px 5px 2px black;
+}
+
+.produto_1, .produto_2, .produto_3, .produto_4, .produto_5, .produto_6, .produto_7, .produto_8, .produto_9 {
+    background-position: 50% 20%;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    justify-content: flex-end;
+}
+
+.produto_1 {
+    background-image: url('./imagens/produto_1.jpg');
+}
+
+.produto_2 {
+    background-image: url('./imagens/produto_2.jpeg');
+}
+
+.produto_3 {
+    background-image: url('./imagens/produto_3.jpg');
+}
+
+.produto_4 {
+    background-image: url('./imagens/produto_4.jpeg');
+}
+
+.produto_5 {
+    background-image: url('./imagens/produto_5.jpg');
+}
+
+.produto_6 {
+    background-image: url('./imagens/produto_6.jpeg');
+}
+
+.produto_7 {
+    background-image: url('./imagens/produto_7.jpg');
+}
+
+.produto_8 {
+    background-image: url('./imagens/produto_8.jpg');
+}
+
+.produto_9 {
+    background-image: url('./imagens/produto_9.jpg');
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Space Mono', monospace;
+    font-size: 80%;
+}
+
+/*Botão do Whatsapp*/
+.container_wpp {
+    margin-top: 5%;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.wpp {
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.wpp:hover {
+    background-color: bisque;
+    transform: scale(1.02);
+    box-shadow: 10px 10px black;
+}
+
+.wpp_1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+
+.p_wpp {
+    color: black;
+    font-family: 'Anton', sans-serif;
+}
+
+/*Contatos*/
+.container_contatos {
+    width: 100%;
+    height: 200px;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_contantos {
+    color: antiquewhite;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.div_contato {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.img_contato {
+    width: 50px;
+}
+
+/*Localização*/
+.localizacao {
+    margin-top: 200px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title_local {
+    color: antiquewhite;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.maps {
+    width: 80%;
+    height: 400px;
+    border: none;
+}
+
+/*Rodapé*/
+footer {
+    width: 100%;
+    height: 300px;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direitos {
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3vh;
+}
+
+.desenvolvedor {
+    color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3vh;
+}
+
+.contato_dev {
+    width: 80%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.img_dev {
+    width: 50px;
+}
+
+@media(max-width: 767px) {
+
+    /*Principal*/
+    .apresentacao {
+        width: 100%;
+        height: 750px;
+        margin-top: 40px;
+    }
+    
+    .apresentacao_content {
+        width: 80%;
+        height: 100%;
+    }
+    
+    .apresentacao_texto {
+        margin-top: 150px;
+        width: 100%;
+        height: 100%;
+        gap: 35%;
+    }
+    
+    .texto_bem-vindo {
+        width: 100%;
+        font-size: 4vh;
+    }
+    
+    .bem-vindo {
+        font-size: 4vh;
+    }
+
+    /*Botão-seta*/
+    .btn-fixed {
+        position: fixed;
+        bottom: 1%;
+        left:10px;
+        visibility: hidden;
+    }
+    
+    .btn-fixed.visible {
+        visibility: visible;
+    }
+    
+    .seta {
+        width: 25px;
+        height: 25px;
+        transition: 1s;
+    }
+
+    /*Serviços*/
+    .nossos_servicos {
+        margin-top: 50px;
+        font-size: 3vh;
+    }
+
+    .servicos {
+        margin-top: 30px;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 15px;
+        gap: 10px;
+    }
+
+    /*Produtos*/
+    
+    .titulo_produtos {
+        font-size: 3vh;
+    }
+    
+    .icone_bigode {
+        width: 5%;
+    }
+    
+    .container_produtos {
+        width: 100%;
+        margin-top: 10%;
+    }
+    
+    .produtos {
+        margin-top: 5%;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+    .banner {
+        width: 60%;
+        height: 20rem;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    /*Botão do Whatsapp*/
+    .container_wpp {
+        margin-top: 10px;
+    }
+
+    .wpp {
+        width: 70%;
+        height: 40%;
+        padding: 10px;
+    }
+
+    /*Contatos*/
+    .title_contantos {
+        font-size: 3vh;
+    }
+
+    .img_dev {
+        width: 30px;
+    }
+
+}
+
+@media(min-width: 475px) {
+    .produtos {
+        width: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
