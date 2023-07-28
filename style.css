@@ -300,6 +300,7 @@ a {
 
 .produto_1 {
     background-image: url('./imagens/produto_1.jpg');
+    
 }
 
 .produto_2 {
@@ -602,6 +603,18 @@ footer {
 @media(min-width: 475px) {
     .produtos {
         width: 70%;
+    }
+}
+
+@media(min-width:552px) and (max-width:595px) {
+    .banner {
+        width: 55%;
+    }
+}
+
+@media(min-width:596px) and (max-width:650px) {
+    .banner {
+        width: 50%;
     }
 }
 
