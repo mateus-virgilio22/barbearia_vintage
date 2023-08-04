@@ -4,43 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css">
     <title>Vintage</title>
     <link rel="shortcut icon" href="./imagens/logo.png" type="image/x-icon">
 </head>
 <body>
-    <a class="btn-fixed" href="#home">
-        <span class="material-icons">
-            <img class="seta" src="./imagens/seta.svg" alt="">
-        </span>
-    </a>
-    <header id="home" class="cabecalho">
-        <nav class="navigation">
-            <img id="logo" src="./imagens/logo.png" alt="Logo_Vintage">
-            <a href="">Home</a>
-            <a href="#serviços">Serviços</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#contatos">Contato</a>
-        </nav>
-    </header>
-
-    <main>
-        <!--Apresentação da Barbearia-->
-        <div class="container_principal">
-            <section class="titulo">
-                <h2 class="nome_empresa_2">Barbershop</h2>
-                <h1 class="nome_empresa">Vintage</h1>
-            </section>
-            <div class="apresentacao">
-                <div class="apresentacao_content">
-                    <div class="apresentacao_texto">
-                        <h2 class="texto_bem-vindo">Ao entrar em nossa barbearia, você logo estará imerso na atmosfera nostálgica de uma época passada.</h2>
-                        <p class="bem-vindo" >Seja bem-vindo!</p>
-                    </div>
+    <!--HEADER DESKTOP-->
+    
+    <div class="bg-home">
+        <header id="home" class="header-desktop">
+            <nav class="header-content container">
+                <div class="header-menu">
+                    <a href="#home">Home</a>
+                    <a href="#servicos">Serviços</a>
                 </div>
-            </div> 
-        </div>
+                <div class="header-logo">
+                    <img class="img-logo" src="./imagens/logo.png" alt="Logo da Barbearia">
+                </div>
+                <div class="header-menu">
+                    <a href="#produtos">Produtos</a>
+                    <a href="#contatos">Contatos</a>
+                </div>
+            </nav>
 
+            <main class="hero container">
+                <h1 class="txt_bvd">Ao entrar em nossa barbearia, você logo estará imerso na atmosfera nostálgica de uma época passada.</h1>
+            </main>
+        </header>
+    </div>
+    
+    <!--HEADER MOBILE-->
+
+    <div class="bg-home">
+        <header id="home" class="header-mobile">
+            <div class="div-button">
+                <button class="nav-button" onclick="openNav()">
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                </button>
+            </div>
+            
+            <img class="log-mob" src="./imagens/logo.png" alt="Logo da Barbearia">
+            
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+                <div class="overlay-content">
+                    <img src="./imagens/icon_overlay.png" alt="Barber">
+                    <a href="#home" onclick="closeNav()">Home</a>
+                    <a href="#servicos" onclick="closeNav()">Serviços</a>
+                    <a href="#produtos" onclick="closeNav()">Produtos</a>
+                    <a href="#contatos" onclick="closeNav()">Contatos</a>
+                </div>
+            </div>
+
+            <main class="hero container">
+                <h1 class="txt_bvd">Ao entrar em nossa barbearia, você logo estará imerso na atmosfera nostálgica de uma época passada.</h1>
+            </main>
+        </header>
+    </div>
+        
         <!--Serviços da barbearia-->
         <div id="serviços" class="container_servicos">
             <h2 class="nossos_servicos">Nossos serviços</h2>
@@ -64,8 +93,9 @@
                 </div>
             </div>
         </div>
-
+        
         <!--Produtos da barbearia-->
+        
         <div id="produtos" class="div_titulo_prod">
             <h2 class="titulo_produtos">Nossos produtos</h2>
             <img class="icone_bigode" src="./imagens/bigode.png" alt="Bigode">
@@ -136,8 +166,9 @@
                 </a>
             </div>
         </div>
-
+        
         <!--Contatos-->
+        
         <div id="contatos" class="container_contatos">
             <h2 class="title_contantos">Contatos</h2>
             <img class="icone_bigode" src="./imagens/bigode.png" alt="Bigode">
@@ -146,14 +177,15 @@
                 <a href="https://www.instagram.com/vintagebarbershopnr/" target="_blank"><img class="img_contato" src="./imagens/instagram.png" alt="Instagram"></a>
             </div>
         </div>
-
+        
         <!--Localização-->
+        
         <div class="localizacao">
             <h2 class="title_local">Localização</h2>
             <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.2993637456245!2d-40.56147212320582!3d-4.704829253800488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x795cda39d1e4635%3A0xe16cb0a0869a2d93!2sVintagebarbershopNr!5e1!3m2!1spt-BR!2sbr!4v1690544013322!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-    </main>
+    
 
     <footer>
         <span class="direitos">Todos os direitos reservados ©</span>
@@ -168,6 +200,10 @@
             <a href="https://github.com/mateus-virgilio22" target="_blank"><img class="img_dev" src="./imagens/placa-do-github.png" alt="GitHub"></a>
         </div>
     </footer>
+    
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
+    <script src="./script.js"></script>
 
     <script type="text/javascript" src="arquivo.js"></script>
 </body>
