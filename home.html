@@ -71,28 +71,99 @@
     </div>
         
         <!--Serviços da barbearia-->
-        <div id="serviços" class="container_servicos">
-            <h2 class="nossos_servicos">Nossos serviços</h2>
-            <img class="icone_bigode" src="./imagens/bigode.png" alt="Bigode">
-            <div class="servicos">
-                <div class="card">
-                    <img class="cabelo" src="./imagens/cabelo.png" alt="">
-                    <h2 class="corte">Cabelo</h2>
-                    <p class="corte_cabelo">Social R$ 15,00</p>
-                    <p class="corte_cabelo">Degradê R$ 18,00</p>
+    <section class="products">
+        <div class="products-content container">
+            <h2>Serviços</h2>
+        </div>
+    
+        <div class="app">
+            <div class="cardList">
+                <button class="cardList__btn btn btn--left">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="#arrow-left" ></use>
+                        </svg>
+                    </div>
+                </button>
+    
+                <div class="cards__wrapper">
+                    <div class="card current--card">
+                        <div class="card__image">
+                            <img src="./imagens/corte1.png" alt=""/>
+                        </div>
+                    </div>
+                        
+                    <div class="card next--card">
+                        <div class="card__image">
+                            <img src="./imagens/corte2.png" alt=""/>
+                        </div>
+                    </div>
+    
+                    <div class="card previous--card">
+                        <div class="card__image">
+                            <img src="./imagens/corte3.png" alt=""/>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img class="barba" src="./imagens/barba.png" alt="">
-                    <h2 class="corte">Barba</h2>
-                    <h3>R$ 10,00</h3>
+    
+                <button class="cardList__btn btn btn--right">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+    
+            <div class="infoList">
+                <div class="info__wrapper">
+                    <div class="info current--info">
+                        <h1 class="text name">Cabelo Social/Degradê</h1>
+                        <p class="text description">R$ 15,00/R$ 18,00</p>
+                    </div>
+    
+                    <div class="info next--info">
+                        <h1 class="text name">Barba</h1>
+                        <p class="text description">R$ 10,00</p>
+                    </div>
+    
+                    <div class="info previous--info">
+                        <h1 class="text name">Cabelo e barba</h1>
+                        <p class="text description">R$ 25,00</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img class="cabelo_barba" src="./imagens/cabelo_barba.png" alt="">
-                    <h2 class="corte">Cabelo e barba</h2>
-                    <h3>R$ 25,00</h3>
+            </div>
+    
+            <div class="app__bg">
+                <div class="app__bg__image current--image">
+                    <img src="./imagens/corte1.png" alt=""/>
+                </div>
+                <div class="app__bg__image next--image">
+                    <img src="./imagens/corte2.png" alt=""/>
+                </div>
+                <div class="app__bg__image previous--image">
+                    <img src="./imagens/corte3.png" alt=""/>
                 </div>
             </div>
         </div>
+    
+        <div class="loading__wrapper">
+            <div class="loader--text">Carregando...</div>
+            <div class="loader">
+                <span></span>
+            </div>
+        </div>
+    
+        <svg class="icons" style="display: none;">
+            <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                <polyline points='328 112 184 256 328 400' style='fill:nome;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px;'/>
+            </symbol>
+            <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                <polyline points='184 112 328 256 184 400' style='fill:nome;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px;'/>
+            </symbol>
+        </svg>
+    
+    </section>
         
         <!--Produtos da barbearia-->
         
@@ -200,7 +271,8 @@
             <a href="https://github.com/mateus-virgilio22" target="_blank"><img class="img_dev" src="./imagens/placa-do-github.png" alt="GitHub"></a>
         </div>
     </footer>
-
+    <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
     <script type="text/javascript" src="arquivo.js"></script>
 </body>
 </html>
