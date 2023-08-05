@@ -440,7 +440,7 @@ header {
   .info .description {
     --text-size-offset: 0.065;
     font-weight: 500;
-    font-size: 4vh;
+    font-size: 3vh;
   }
   
   .info.current--info {
