@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,71 +10,70 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="shortcut icon" href="./imagens/barbearia_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./midias/favicon.png" type="image/x-icon">
     <title>Vintage</title>
-    <link rel="shortcut icon" href="./imagens/logo.png" type="image/x-icon">
 </head>
 <body>
     <!--HEADER DESKTOP-->
-    
-    <div class="bg-home">
-        <header id="home" class="header-desktop">
+    <div id="home" class="bg-home">
+        <header class="header-desktop">
             <nav class="header-content container">
                 <div class="header-menu">
                     <a href="#home">Home</a>
-                    <a href="#servicos">Serviços</a>
+                    <a href="#services">Serviços</a>
                 </div>
                 <div class="header-logo">
-                    <img class="img-logo" src="./imagens/logo.png" alt="Logo da Barbearia">
+                    <img class="img-logo" src="./imagens/logo.png" alt="Logo da barbearia">
                 </div>
                 <div class="header-menu">
-                    <a href="#produtos">Produtos</a>
+                    <a href="#products">Produtos</a>
                     <a href="#contatos">Contatos</a>
                 </div>
             </nav>
 
             <main class="hero container">
-                <h1 class="txt_bvd">Ao entrar em nossa barbearia, você logo estará imerso na atmosfera nostálgica de uma época passada.</h1>
+                <h1>Ao entrar em nossa barbearia, você logo estará imerso na atmosfera nostálgica de uma época passada.</h1>
             </main>
         </header>
     </div>
-    
-    <!--HEADER MOBILE-->
 
+    <!--HEADER MOBILE-->
     <div class="bg-home">
-        <header id="home" class="header-mobile">
+        <header class="header-mobile">
             <div class="div-button">
                 <button class="nav-button" onclick="openNav()">
                     <i class="fa-solid fa-bars fa-2x"></i>
                 </button>
             </div>
             
-            <img class="log-mob" src="./imagens/logo.png" alt="Logo da Barbearia">
+            <img class="log-mob" src="./imagens/logo.png" alt="Logo da barbearia">
             
             <div id="myNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                
+
                 <div class="overlay-content">
                     <img src="./imagens/icon_overlay.png" alt="Barber">
                     <a href="#home" onclick="closeNav()">Home</a>
-                    <a href="#servicos" onclick="closeNav()">Serviços</a>
-                    <a href="#produtos" onclick="closeNav()">Produtos</a>
+                    <a href="#services" onclick="closeNav()">Serviços</a>
+                    <a href="#products" onclick="closeNav()">Produtos</a>
                     <a href="#contatos" onclick="closeNav()">Contatos</a>
                 </div>
             </div>
-
             <main class="hero container">
-                <h1 class="txt_bvd">Ao entrar em nossa barbearia, você logo estará imerso na atmosfera nostálgica de uma época passada.</h1>
+                <h1>Ao entrar em nossa barbearia, você logo estará imerso na atmosfera nostálgica de uma época passada.</h1>
             </main>
         </header>
     </div>
-        
-        <!--Serviços da barbearia-->
-    <section class="products">
-        <div class="products-content container">
+
+    <!-----------------SERVICES------------------>
+
+    <section id="services" class="services">
+        <div class="services-content container">
             <h2>Serviços</h2>
         </div>
-    
+
         <div class="app">
             <div class="cardList">
                 <button class="cardList__btn btn btn--left">
@@ -85,27 +83,27 @@
                         </svg>
                     </div>
                 </button>
-    
+
                 <div class="cards__wrapper">
                     <div class="card current--card">
                         <div class="card__image">
                             <img src="./imagens/corte1.png" alt=""/>
                         </div>
                     </div>
-                        
+
                     <div class="card next--card">
                         <div class="card__image">
                             <img src="./imagens/corte2.png" alt=""/>
                         </div>
                     </div>
-    
+
                     <div class="card previous--card">
                         <div class="card__image">
                             <img src="./imagens/corte3.png" alt=""/>
                         </div>
                     </div>
                 </div>
-    
+
                 <button class="cardList__btn btn btn--right">
                     <div class="icon">
                         <svg>
@@ -114,26 +112,26 @@
                     </div>
                 </button>
             </div>
-    
+
             <div class="infoList">
                 <div class="info__wrapper">
                     <div class="info current--info">
-                        <h1 class="text name">Cabelo Social/Degradê</h1>
-                        <p class="text description">R$ 15,00/R$ 18,00</p>
+                        <h1 class="text name">Cabelo (Social/Degradê)</h1>
+                        <p class="text description">R$ 15,00 / R$ 18,00</p>
                     </div>
-    
+
                     <div class="info next--info">
                         <h1 class="text name">Barba</h1>
                         <p class="text description">R$ 10,00</p>
                     </div>
-    
+
                     <div class="info previous--info">
                         <h1 class="text name">Cabelo e barba</h1>
                         <p class="text description">R$ 25,00</p>
                     </div>
                 </div>
             </div>
-    
+
             <div class="app__bg">
                 <div class="app__bg__image current--image">
                     <img src="./imagens/corte1.png" alt=""/>
@@ -146,14 +144,14 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="loading__wrapper">
             <div class="loader--text">Carregando...</div>
             <div class="loader">
                 <span></span>
             </div>
         </div>
-    
+
         <svg class="icons" style="display: none;">
             <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
                 <polyline points='328 112 184 256 328 400' style='fill:nome;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px;'/>
@@ -162,14 +160,13 @@
                 <polyline points='184 112 328 256 184 400' style='fill:nome;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px;'/>
             </symbol>
         </svg>
-    
+
     </section>
-        
-        <!--Produtos da barbearia-->
-        
-        <div id="produtos" class="div_titulo_prod">
-            <h2 class="titulo_produtos">Nossos produtos</h2>
-            <img class="icone_bigode" src="./imagens/bigode.png" alt="Bigode">
+
+    <!-------------PRODUTOS---------------->
+    <section id="products" class="section-produtos">
+        <div id="produtos" class="titulo_prod">
+            <h2 class="titulo_produtos">Produtos</h2>
         </div>
 
         <div class="container_produtos">
@@ -182,7 +179,7 @@
                 </div>
                 <div class="banner produto_2">
                     <span class="info">
-                        <h3>Mqn. de acabamento</h3>
+                        <h3>Acabamento</h3>
                         <p>Vintage T9</p>
                     </span>
                 </div>
@@ -227,40 +224,46 @@
                         <h3>Perfumes</h3>
                     </span>
                 </div>
+                <div class="banner produto_10">
+                    <span class="info">
+                        <h3>Perfumes</h3>
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="container_wpp">
-            <div class="wpp">
-                <a class="wpp_1" href="https://wa.me/5588992554546" target="_blank">
-                    <img src="./imagens/whatsapp.svg" width="50" alt="Fale conosco pelo Whatsapp" title="Fale conosco pelo Whatsapp">
-                    <p class="p_wpp">Informações sobre valores e outros produtos</p>
-                </a>
-            </div>
+    </section>
+    <div class="container_wpp">
+        <div class="wpp">
+            <a class="wpp_1" href="https://wa.me/5588992554546" target="_blank">
+                <img src="./imagens/whatsapp.svg" width="50" alt="Fale conosco pelo Whatsapp" title="Fale conosco pelo Whatsapp">
+                <p class="p_wpp">Informações sobre valores e outros produtos</p>
+            </a>
         </div>
-        
-        <!--Contatos-->
-        
-        <div id="contatos" class="container_contatos">
-            <h2 class="title_contantos">Contatos</h2>
-            <img class="icone_bigode" src="./imagens/bigode.png" alt="Bigode">
-            <div class="div_contato">
-                <a href="https://wa.me/5588992554546" target="_blank"><img class="img_contato" src="./imagens/whatsapp.png" alt="Whatsapp"></a>
-                <a href="https://www.instagram.com/vintagebarbershopnr/" target="_blank"><img class="img_contato" src="./imagens/instagram.png" alt="Instagram"></a>
-            </div>
-        </div>
-        
-        <!--Localização-->
-        
-        <div class="localizacao">
-            <h2 class="title_local">Localização</h2>
-            <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.2993637456245!2d-40.56147212320582!3d-4.704829253800488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x795cda39d1e4635%3A0xe16cb0a0869a2d93!2sVintagebarbershopNr!5e1!3m2!1spt-BR!2sbr!4v1690544013322!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+    </div>
 
-    
+    <!--CONTATOS-->
+
+    <div id="contatos" class="container_contatos">
+        <h2 class="title_contantos">Contatos</h2>
+        <div class="div_contato">
+            <a href="https://wa.me/5588992554546" target="_blank"><img class="img_contato" src="./imagens/whatsapp.png" alt="Whatsapp"></a>
+            <a href="https://www.instagram.com/vintagebarbershopnr/" target="_blank"><img class="img_contato" src="./imagens/instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+
+     <!--Localização-->
+        
+    <div class="localizacao">
+        <h2 class="title_local">Localização</h2>
+        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.2993637456245!2d-40.56147212320582!3d-4.704829253800488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x795cda39d1e4635%3A0xe16cb0a0869a2d93!2sVintagebarbershopNr!5e1!3m2!1spt-BR!2sbr!4v1690544013322!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+<!--Desenvolvedor-->
 
     <footer>
         <span class="direitos">Todos os direitos reservados ©</span>
         <span class="desenvolvedor">Desenvolvido por: Mateus Virgílio</span>
+        <span class="desenvolvedor">Redes sociais/Contatos/Portfólio</span>
         <div class="contato_dev">
             <a href="https://wa.me/5588998195203" target="_blank"><img class="img_dev" src="./imagens/whatsapp_dev.png" alt="Whatsapp"></a>
 
@@ -271,6 +274,8 @@
             <a href="https://github.com/mateus-virgilio22" target="_blank"><img class="img_dev" src="./imagens/placa-do-github.png" alt="GitHub"></a>
         </div>
     </footer>
+
+
     <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
     <script type="text/javascript" src="arquivo.js"></script>
