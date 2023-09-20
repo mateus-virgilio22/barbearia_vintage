@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    background-color: var(--primaria-);
+    color: var(--preto-);
+    /* position: relative; */
+}
+
+:root {
+    --primaria-: #2f3532;
+    --secundaria-: #525855;
+    --branco-: #ffffff;
+    --preto-: #000000;
+}
+
+/**/
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--branco-);
+}

@@ -24,7 +24,7 @@ const buttons = {
 	prev: document.querySelector(".btn--left"),
 	next: document.querySelector(".btn--right"),
 };
-const cardsContainerEl = document.querySelector(".cards__wrapper");
+const cardsContainerEl = document.querySelector(".cardys__wrapper");
 const appBgContainerEl = document.querySelector(".app__bg");
 
 const cardInfosContainerEl = document.querySelector(".info__wrapper");
@@ -34,9 +34,9 @@ buttons.next.addEventListener("click", () => swapCards("right"));
 buttons.prev.addEventListener("click", () => swapCards("left"));
 
 function swapCards(direction) {
-	const currentCardEl = cardsContainerEl.querySelector(".current--card");
-	const previousCardEl = cardsContainerEl.querySelector(".previous--card");
-	const nextCardEl = cardsContainerEl.querySelector(".next--card");
+	const currentCardEl = cardsContainerEl.querySelector(".current--cardy");
+	const previousCardEl = cardsContainerEl.querySelector(".previous--cardy");
+	const nextCardEl = cardsContainerEl.querySelector(".next--cardy");
 
 	const currentBgImageEl = appBgContainerEl.querySelector(".current--image");
 	const previousBgImageEl = appBgContainerEl.querySelector(".previous--image");
@@ -48,9 +48,9 @@ function swapCards(direction) {
 	removeCardEvents(currentCardEl);
 
 	function swapCardsClass() {
-		currentCardEl.classList.remove("current--card");
-		previousCardEl.classList.remove("previous--card");
-		nextCardEl.classList.remove("next--card");
+		currentCardEl.classList.remove("current--cardy");
+		previousCardEl.classList.remove("previous--cardy");
+		nextCardEl.classList.remove("next--cardy");
 
 		currentBgImageEl.classList.remove("current--image");
 		previousBgImageEl.classList.remove("previous--image");
@@ -65,9 +65,9 @@ function swapCards(direction) {
 
 			nextBgImageEl.style.zIndex = "-1";
 
-			currentCardEl.classList.add("previous--card");
-			previousCardEl.classList.add("next--card");
-			nextCardEl.classList.add("current--card");
+			currentCardEl.classList.add("previous--cardy");
+			previousCardEl.classList.add("next--cardy");
+			nextCardEl.classList.add("current--cardy");
 
 			currentBgImageEl.classList.add("previous--image");
 			previousBgImageEl.classList.add("next--image");
@@ -78,9 +78,9 @@ function swapCards(direction) {
 
 			previousBgImageEl.style.zIndex = "-1";
 
-			currentCardEl.classList.add("next--card");
-			previousCardEl.classList.add("current--card");
-			nextCardEl.classList.add("previous--card");
+			currentCardEl.classList.add("next--cardy");
+			previousCardEl.classList.add("current--cardy");
+			nextCardEl.classList.add("previous--cardy");
 
 			currentBgImageEl.classList.add("next--image");
 			previousBgImageEl.classList.add("current--image");
@@ -161,7 +161,7 @@ function updateCard(e) {
 	};
 	let angle = Math.atan2(e.pageX - centerPosition.x, 0) * (35 / Math.PI);
 	gsap.set(card, {
-		"--current-card-rotation-offset": `${angle}deg`,
+		"--current-cardy-rotation-offset": `${angle}deg`,
 	});
 	const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
 	gsap.set(currentInfoEl, {
@@ -173,7 +173,7 @@ function resetCardTransforms(e) {
 	const card = e.currentTarget;
 	const currentInfoEl = cardInfosContainerEl.querySelector(".current--info");
 	gsap.set(card, {
-		"--current-card-rotation-offset": 0,
+		"--current-cardy-rotation-offset": 0,
 	});
 	gsap.set(currentInfoEl, {
 		rotateY: 0,
@@ -181,7 +181,7 @@ function resetCardTransforms(e) {
 }
 
 function initCardEvents() {
-	const currentCardEl = cardsContainerEl.querySelector(".current--card");
+	const currentCardEl = cardsContainerEl.querySelector(".current--cardy");
 	currentCardEl.addEventListener("pointermove", updateCard);
 	currentCardEl.addEventListener("pointerout", (e) => {
 		resetCardTransforms(e);
@@ -206,7 +206,7 @@ function init() {
 			from: "right",
 			amount: 0.1,
 		},
-		"--card-translateY-offset": "0%",
+		"--cardy-translateY-offset": "0%",
 	})
 		.to(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
 		delay: 0.5,
@@ -233,7 +233,7 @@ const waitForImages = () => {
 	const loaderEl = document.querySelector(".loader span");
 
 	gsap.set(cardsContainerEl.children, {
-		"--card-translateY-offset": "100vh",
+		"--cardy-translateY-offset": "100vh",
 	});
 	gsap.set(cardInfosContainerEl.querySelector(".current--info").querySelectorAll(".text"), {
 		translateY: "40px",

@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
+    <!--FONT AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/global.css">
+    <link rel="stylesheet" href="./CSS/responsivo.css">
+    
     <link rel="shortcut icon" href="./imagens/barbearia_favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./midias/favicon.png" type="image/x-icon">
     <title>Vintage</title>
 </head>
 <body>
     <!--HEADER DESKTOP-->
+
     <div id="home" class="bg-home">
         <header class="header-desktop">
             <nav class="header-content container">
                 <div class="header-menu">
                     <a href="#home">Home</a>
-                    <a href="#services">Serviços</a>
+                    <a href="#servicos">Serviços</a>
                 </div>
                 <div class="header-logo">
                     <img class="img-logo" src="./imagens/logo.png" alt="Logo da barbearia">
                 </div>
                 <div class="header-menu">
-                    <a href="#products">Produtos</a>
+                    <a href="#produtos">Produtos</a>
                     <a href="#contatos">Contatos</a>
                 </div>
             </nav>
@@ -40,6 +45,7 @@
     </div>
 
     <!--HEADER MOBILE-->
+    
     <div class="bg-home">
         <header class="header-mobile">
             <div class="div-button">
@@ -56,8 +62,8 @@
                 <div class="overlay-content">
                     <img src="./imagens/icon_overlay.png" alt="Barber">
                     <a href="#home" onclick="closeNav()">Home</a>
-                    <a href="#services" onclick="closeNav()">Serviços</a>
-                    <a href="#products" onclick="closeNav()">Produtos</a>
+                    <a href="#servicos" onclick="closeNav()">Serviços</a>
+                    <a href="#produtos" onclick="closeNav()">Produtos</a>
                     <a href="#contatos" onclick="closeNav()">Contatos</a>
                 </div>
             </div>
@@ -67,16 +73,40 @@
         </header>
     </div>
 
+    <!--Nossa barbearia-->
+
+    <section class="container_nossa_barbearia">
+
+        <h2>Nosso ambiente</h2>
+        <div class="content">
+            <div class="content_nossa_barbearia">
+                <h3>Conforto</h3>
+                <p>Nossa barbearia é climatizada, o que proporciona um ambiente confortável. Você poderá desfrutar de uma temperatura agradável durante o seu corte de cabelo ou barba.</p>
+            </div>
+
+            <div class="content_nossa_barbearia">
+                <h3>Atmosfera agradável</h3>
+                <p>A música ambiente é um complemento agradável para a atmosfera da barbearia. Ajuda a relaxar e a tornar a espera e o processo de corte mais agradável.</p>
+            </div>
+
+            <div class="content_nossa_barbearia">
+                <h3>Atendimento de qualidade</h3>
+                <p>O bom atendimento é fundamental em qualquer estabelecimento. Possuímos um atendimento humanizado e focado totalmente na experiência do cliente.</p>
+            </div>
+        </div>
+        
+    </section>
+
     <!-----------------SERVICES------------------>
 
-    <section id="services" class="services">
+    <section id="servicos" class="services">
         <div class="services-content container">
             <h2>Serviços</h2>
         </div>
 
         <div class="app">
-            <div class="cardList">
-                <button class="cardList__btn btn btn--left">
+            <div class="cardyList">
+                <button class="cardyList__btn btn btn--left">
                     <div class="icon">
                         <svg>
                             <use xlink:href="#arrow-left" ></use>
@@ -84,27 +114,27 @@
                     </div>
                 </button>
 
-                <div class="cards__wrapper">
-                    <div class="card current--card">
-                        <div class="card__image">
+                <div class="cardys__wrapper">
+                    <div class="cardy current--cardy">
+                        <div class="cardy__image">
                             <img src="./imagens/corte1.png" alt=""/>
                         </div>
                     </div>
 
-                    <div class="card next--card">
-                        <div class="card__image">
+                    <div class="cardy next--cardy">
+                        <div class="cardy__image">
                             <img src="./imagens/corte2.png" alt=""/>
                         </div>
                     </div>
 
-                    <div class="card previous--card">
-                        <div class="card__image">
+                    <div class="cardy previous--cardy">
+                        <div class="cardy__image">
                             <img src="./imagens/corte3.png" alt=""/>
                         </div>
                     </div>
                 </div>
 
-                <button class="cardList__btn btn btn--right">
+                <button class="cardyList__btn btn btn--right">
                     <div class="icon">
                         <svg>
                             <use xlink:href="#arrow-right"></use>
@@ -164,120 +194,111 @@
     </section>
 
     <!-------------PRODUTOS---------------->
-    <section id="products" class="section-produtos">
-        <div id="produtos" class="titulo_prod">
-            <h2 class="titulo_produtos">Produtos</h2>
-        </div>
+    
+    <section class="container_produtos" id="produtos">
 
-        <div class="container_produtos">
-            <div class="produtos">
-                <div class="banner produto_1">
-                    <span class="info">
-                        <h3>Minoxidil</h3>
-                        <p>Kirkland</p>
-                    </span>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-5 wow fadeIn ">
+                        <h2>Produtos</h2>
                 </div>
-                <div class="banner produto_2">
-                    <span class="info">
-                        <h3>Acabamento</h3>
-                        <p>Vintage T9</p>
-                    </span>
+
+                <div class="col-12 col-one content-produtos wow fadeInUp">
+                    <a class="btn btn-white btn-sm mr-3 active" id="produtos-camisas"
+                     onclick="produtos.metodos.obterItensProdutos('camisas')">
+                        Camisas
+                    </a>
+
+                    <a class="btn btn-white btn-sm mr-3" id="produtos-perfumes"
+                    onclick="produtos.metodos.obterItensProdutos('perfumes')">
+                        Perfumes 
+                    </a>
+
+                    <a class="btn btn-white btn-sm mr-3" id="produtos-variados"
+                    onclick="produtos.metodos.obterItensProdutos('variados')">
+                        Variados 
+                    </a>
                 </div>
-                <div class="banner produto_3">
-                    <span class="info">
-                        <h3>Aparador de pelos</h3>
-                        <p>Ecooda</p>
-                    </span>
+
+                <div class="col-12 col-one ">
+                    <div class="row produtos" id="itensProdutos">
+                        
+                    </div>
                 </div>
-                <div class="banner produto_4">
-                    <span class="info">
-                        <h3>Carteira</h3>
-                        <p>Calvin Klein</p>
-                    </span>
+
+                <div class="col-12 col-one text-center wow fadeInUp ">
+                    <a id="btnVerMais" class="btn-white btn-sm" onclick="produtos.metodos.verMais()">
+                        Ver mais
+                    </a>
                 </div>
-                <div class="banner produto_5">
-                    <span class="info">
-                        <h3>Carteira</h3>
-                        <p>Tommy Hilfiger</p>
-                    </span>
-                </div>
-                <div class="banner produto_6">
-                    <span class="info">
-                        <h3>Carteira</h3>
-                        <p>John John</p>
-                    </span>
-                </div>
-                <div class="banner produto_7">
-                    <span class="info">
-                        <h3>Óculos</h3>
-                        <p>Ray-Ban</p>
-                    </span>
-                </div>
-                <div class="banner produto_8">
-                    <span class="info">
-                        <h3>Óculos</h3>
-                        <p>Ray-Ban</p>
-                    </span>
-                </div>
-                <div class="banner produto_9">
-                    <span class="info">
-                        <h3>Perfumes</h3>
-                    </span>
-                </div>
-                <div class="banner produto_10">
-                    <span class="info">
-                        <h3>Perfumes</h3>
-                    </span>
-                </div>
+
             </div>
         </div>
     </section>
+
+    
     <div class="container_wpp">
-        <div class="wpp">
-            <a class="wpp_1" href="https://wa.me/5588992554546" target="_blank">
-                <img src="./imagens/whatsapp.svg" width="50" alt="Fale conosco pelo Whatsapp" title="Fale conosco pelo Whatsapp">
-                <p class="p_wpp">Informações sobre valores e outros produtos</p>
-            </a>
-        </div>
+        <a href="https://wa.me/5588992554546" target="_blank">
+            <button>Mais informações!</button>
+        </a>
     </div>
+    
+    <!--Localização-->
+    <section class="container_localizacao">
+        <div class="localizacao">
+            <h2>Localização</h2>
+            <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.2993637456245!2d-40.56147212320582!3d-4.704829253800488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x795cda39d1e4635%3A0xe16cb0a0869a2d93!2sVintagebarbershopNr!5e1!3m2!1spt-BR!2sbr!4v1690544013322!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>   
 
     <!--CONTATOS-->
 
     <div id="contatos" class="container_contatos">
-        <h2 class="title_contantos">Contatos</h2>
+        <h2>Contatos</h2>
         <div class="div_contato">
-            <a href="https://wa.me/5588992554546" target="_blank"><img class="img_contato" src="./imagens/whatsapp.png" alt="Whatsapp"></a>
-            <a href="https://www.instagram.com/vintagebarbershopnr/" target="_blank"><img class="img_contato" src="./imagens/instagram.png" alt="Instagram"></a>
+            <a href="https://wa.me/5588992554546" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/douglasnascimentonr/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
     </div>
+    
 
-     <!--Localização-->
-        
-    <div class="localizacao">
-        <h2 class="title_local">Localização</h2>
-        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1685.2993637456245!2d-40.56147212320582!3d-4.704829253800488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x795cda39d1e4635%3A0xe16cb0a0869a2d93!2sVintagebarbershopNr!5e1!3m2!1spt-BR!2sbr!4v1690544013322!5m2!1spt-BR!2sbr"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
 
 <!--Desenvolvedor-->
 
     <footer>
-        <span class="direitos">Todos os direitos reservados ©</span>
-        <span class="desenvolvedor">Desenvolvido por: Mateus Virgílio</span>
-        <span class="desenvolvedor">Redes sociais/Contatos/Portfólio</span>
+        <span class="desenvolvedor">Copyright&copy; Mateus Virgílio</span>
         <div class="contato_dev">
-            <a href="https://wa.me/5588998195203" target="_blank"><img class="img_dev" src="./imagens/whatsapp_dev.png" alt="Whatsapp"></a>
+            <a href="https://wa.me/5588998195203" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
 
-            <a href="https://www.instagram.com/mateusvirgilio/" target="_blank"><img class="img_dev" src="./imagens/instagram (1).png" alt="Instagram"></a>
+            <a href="https://www.instagram.com/mateusvirgilio/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
 
-            <a href="https://www.linkedin.com/in/mateus-virg%C3%ADlio-103590219/" target="_blank"><img class="img_dev" src="./imagens/logotipo-do-linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.linkedin.com/in/mateus-virg%C3%ADlio-103590219/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
 
-            <a href="https://github.com/mateus-virgilio22" target="_blank"><img class="img_dev" src="./imagens/placa-do-github.png" alt="GitHub"></a>
+            <a href="https://github.com/mateus-virgilio22" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
         </div>
     </footer>
 
-
     <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js'></script>
-    <script type="text/javascript" src="arquivo.js"></script>
+    <script type="text/javascript" src="./JS/jquery-1.12.4.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./JS/arquivo.js"></script>
+    <script type="text/javascript" src="./JS/produtos.js"></script>
+    <script type="text/javascript" src="./JS/dados.js"></script>
+    
+    
 </body>
 </html>

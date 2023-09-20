@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+    .header-desktop {
+      display: none;
+    }
+    .header-mobile {
+      width: 100%;
+    }
+    .nav-button {
+      position: relative;
+      left: 15px;
+      top: 15px;
+    }
+    .log-mob {
+      width: 20%;
+      position: relative;
+      left: 40%;
+    }
+    .overlay-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info .name {
+        font-size: 12px;
+    }
+      
+    .info .description {
+        font-size: 12px;
+    }
+    
+  }
+  @media (min-width: 769px) {
+    .header-mobile {
+      display: none;
+    }
+
+    .card {
+      width: 250px;
+      height: 260px;
+    }
+
+    .btn-white {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .container_nossa_barbearia {
+      height: 500px;
+    }
+
+    .content {
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 90%;
+      gap: 15px;
+    }
+
+    .content_nossa_barbearia {
+      height: 320px;
+    }
+
+    .localizacao {
+      width: 60%;
+    }
+  }
