@@ -3,6 +3,8 @@ $(document).ready(function(){
 })
 
 var produtos = {};
+var currentPage = 1;
+var itemsPerPage = 8;
 
 produtos.eventos = {
 
@@ -21,46 +23,39 @@ produtos.metodos = {
         if(!vermais) {
             $("#itensProdutos").html('');
             $("#btnVerMais").removeClass('hidden');
+            currentPage = 1;
         }
 
+        const startIndex = (currentPage - 1) * itemsPerPage;
+        const endIndex = currentPage * itemsPerPage;
 
-        $.each(filtro, (i, e) => {
+
+        $.each(filtro.slice(startIndex, endIndex), (i, e) => {
 
             let temp = produtos.templates.item.replace(/\${img}/g, e.img)
-            /* .replace(/\${dimensao}/g, e.dimensao)
-            .replace(/\${comodos}/g, e.comodos)
-            .replace(/\${bairro}/g, e.bairro) */
-
-            // botão ver mais foi clicado (12 itens)
-            if(vermais && i >= 8 && i < 15) {
-                $("#itensProdutos").append(temp)
-            }
-
-            // paginação inicial (8 itens)
-            if(!vermais && i < 8) {
-                $("#itensProdutos").append(temp)
-            }
             
-        })
+            $("#itensProdutos").append(temp);
+        });
 
-        // remove o ativo
         $(".content-produtos a").removeClass('active');
 
-        // seta o menu para ativo
+        
         $("#produtos-" + categoria).addClass('active');
-
-    },
+    
+        if (endIndex >= filtro.length) {
+          $("#btnVerMais").addClass('hidden');
+        } else {
+          $("#btnVerMais").removeClass('hidden');
+        }
+      },
 
     // clique no botão de ver mais
     verMais: () => {
-
         var ativo = $(".content-produtos a.active").attr('id').split('produtos-')[1];
+        currentPage++;
         produtos.metodos.obterItensProdutos(ativo, true);
-
-        $("#btnVerMais").addClass('hidden');
-
-    }
-}
+      },
+};
 
 produtos.templates = {
 

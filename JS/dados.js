@@ -29,6 +29,54 @@ var PRODUTOS = {
         },
         {
             "img": "./imagens/Camisas/camisa_10.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_11.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_12.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_13.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_14.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_15.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_16.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_17.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_18.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_19.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_20.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_21.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_22.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_23.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_24.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_25.jpg"
+        },
+        {
+            "img": "./imagens/Camisas/camisa_26.jpg"
         }
     ], 
     "perfumes": [
