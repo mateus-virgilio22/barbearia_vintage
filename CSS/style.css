@@ -73,7 +73,7 @@ h2 {
     width: 0;
     height: 100%;
     background-color: var(--terceira-);
-    z-index: 9;
+    z-index: 9999;
     position: fixed;
     left: 0;
     top: 0;
@@ -686,6 +686,26 @@ footer {
 .contato_dev > a > i {
   font-size: 14px;
   color: var(--preto-);
+}
+
+.agendamento {
+  position: fixed;
+  text-align: center;
+  bottom: 12px;
+  right: 12px;
+  width: 110px;
+  height: 55px;
+  border-radius: 10px;
+  border: none;
+  padding: 6px 5px;
+  background-color: var(--terceira-);
+  color: var(--preto-);
+  z-index: 9998;
+  transition: 1s;
+}
+
+.agendamento:hover {
+  transform: scale(1.05);
 }
 
   
