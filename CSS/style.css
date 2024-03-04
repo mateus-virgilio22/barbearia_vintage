@@ -691,12 +691,15 @@ footer {
 .agendamento {
   position: fixed;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   bottom: 12px;
   right: 12px;
   width: 110px;
   height: 55px;
   border-radius: 10px;
-  border: none;
+  border: 2px solid black;
   padding: 6px 5px;
   background-color: var(--terceira-);
   color: var(--preto-);
